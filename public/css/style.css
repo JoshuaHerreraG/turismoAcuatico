@@ -224,26 +224,109 @@ body {
   flex-flow: row nowrap;
   gap: 0;
   background-color: #0378A6;
+  height: 40px;
 }
 
-.main {
-  background-color: green;
+.header-movil__h1 {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #F2F2F2;
 }
 
-.main__banner {
-  background-color: brown;
+.header-movil svg {
+  fill: #F2F2F2;
+}
+
+.main__img-banner {
+  width: 240px;
+  height: 360px;
+  margin: 30px auto 0 auto;
+}
+
+.main__img-banner-down {
+  width: 150px;
+  height: 200px;
+  background-image: url(../assets/banner-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main__img-banner-over {
+  width: 150px;
+  height: 200px;
+  background-image: url(../assets/banner-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: -70px;
+  left: 90px;
 }
 
 .main__about {
-  background-color: burlywood;
+  background-color: #0378A6;
+  color: #F2F2F2;
+}
+
+.main__title-about {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.main__text-about {
+  font-size: 1em;
+  padding: 0 0 30px 0;
+  text-align: justify;
 }
 
 .main__testimonials {
-  background-color: blue;
+  background-color: #049DBF;
+  color: #F2F2F2;
+}
+
+.main__title-testimonials {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.main__text-testimonials {
+  font-size: 1em;
+  padding: 0 0 30px 0;
+  text-align: justify;
 }
 
 .main__guias {
-  background-color: orange;
+  padding: 70px 0;
+}
+
+.main__cards-guias {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0;
+}
+
+.main__cards-img-guia {
+  width: 100px;
+  height: 100px;
+  margin-right: 25px;
+}
+
+.main__name-cards {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #012E40;
+  padding-bottom: 5px;
+}
+
+.main__text-cards {
+  font-size: 1em;
+  padding: 0 0 30px 0;
+  text-align: justify;
 }
 
 .main__experience {

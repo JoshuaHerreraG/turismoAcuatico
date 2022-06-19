@@ -5,24 +5,98 @@
 .header-movil {
   @include flex(space-between, center);
   background-color: $blue-primary;
+  height: 40px;
+
+  &__h1 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: $white;
+  }
+
+  svg {
+    fill: $white;
+  }
 }
 .main {
-  background-color: green;
-
   &__banner {
-    background-color: brown;
+  }
+
+  &__img-banner {
+    width: 240px;
+    height: 360px;
+    margin: 30px auto 0 auto;
+  }
+
+  &__img-banner-down {
+    width: 150px;
+    height: 200px;
+    background-image: url(../assets/banner-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__img-banner-over {
+    width: 150px;
+    height: 200px;
+    background-image: url(../assets/banner-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: -70px;
+    left: 90px;
   }
 
   &__about {
-    background-color: burlywood;
+    background-color: $blue-primary;
+    color: $white;
+  }
+
+  &__title-about {
+    @include title;
+  }
+
+  &__text-about {
+    @include text;
   }
 
   &__testimonials {
-    background-color: blue;
+    background-color: $blue-secundary;
+    color: $white;
+  }
+
+  &__title-testimonials {
+    @include title;
+  }
+
+  &__text-testimonials{
+    @include text;
   }
 
   &__guias {
-    background-color: orange;
+    padding: 70px 0
+  }
+
+  &__cards-guias{
+    @include flex();
+  }
+
+  &__cards-img-guia{
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+  }
+
+  &__name-cards{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $blue-dark;
+    padding-bottom: 5px;
+  }
+
+  &__text-cards{
+    @include text;
   }
 
   &__experience {
