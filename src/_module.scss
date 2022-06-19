@@ -1,0 +1,38 @@
+.header {
+  background-color: gray;
+  display: none;
+}
+.header-movil {
+  @include flex(space-between, center);
+  background-color: $blue-primary;
+}
+.main {
+  background-color: green;
+
+  &__banner {
+    background-color: brown;
+  }
+
+  &__about {
+    background-color: burlywood;
+  }
+
+  &__testimonials {
+    background-color: blue;
+  }
+
+  &__guias {
+    background-color: orange;
+  }
+
+  &__experience {
+    background-color: red;
+  }
+
+  &__decoration {
+    background-color: brown;
+  }
+}
+.footer {
+  background-color: gray;
+}
