@@ -17,14 +17,26 @@
     fill: $white;
   }
 }
+
 .main {
   &__banner {
+    @include media(300px) {
+      width: 100%;
+      height: 300px;
+      background-image: url(../assets/banner-1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   &__img-banner {
     width: 240px;
     height: 360px;
     margin: 30px auto 0 auto;
+    @include media(300px) {
+      display: none;
+    }
   }
 
   &__img-banner-down {
@@ -70,43 +82,204 @@
     @include title;
   }
 
-  &__text-testimonials{
+  &__text-testimonials {
     @include text;
   }
 
   &__guias {
-    padding: 70px 0
+    padding: 70px 0;
   }
 
-  &__cards-guias{
-    @include flex();
+  &__cards-guias {
+    @include flex($gap: 20px, $align: flex-start);
   }
 
-  &__cards-img-guia{
-    width: 100px;
+  &__cards-img-guia {
+    width: 220px;
     height: 100px;
-    margin-right: 25px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
-  &__name-cards{
+  &__cards-img-guia--first {
+    background-image: url("../assets/guias-1.jpg");
+  }
+  &__cards-img-guia--second {
+    background-image: url("../assets/guias-2.jpg");
+  }
+  &__cards-img-guia-third {
+    background-image: url("../assets/guias-3.jpg");
+  }
+
+  &__information-cards {
+    align-content: center;
+  }
+
+  &__name-cards {
     font-size: 1.2em;
     font-weight: bold;
     color: $blue-dark;
     padding-bottom: 5px;
   }
 
-  &__text-cards{
+  &__text-cards {
     @include text;
+    padding-bottom: 50px;
   }
 
   &__experience {
-    background-color: red;
+    color: $blue-dark;
+  }
+
+  &__title-experience {
+    @include title;
+    font-size: 1.9em;
+    padding-bottom: 50px;
+  }
+
+  &__cards-experience {
+    @include flex($justify: center, $direction: column, $gap: 20px);
+  }
+
+  &__cards-img-experience {
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__cards-img-experience--first {
+    background-image: url("../assets/experiencia-1.jpg");
+  }
+  &__cards-img-experience--second {
+    background-image: url("../assets/experiencia-2.jpg");
+  }
+  &__cards-img-experience--third {
+    background-image: url("../assets/experiencia-3.jpg");
+  }
+
+  &__cards-information {
+    text-align: center;
+    color: $blue-dark;
+  }
+
+  &__title-cards {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  &__description-cards {
+    @include text;
+    text-align: center;
   }
 
   &__decoration {
-    background-color: brown;
+    width: 240px;
+    height: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include media(300px) {
+      width: 100%;
+      height: 300px;
+      background-image: url("../assets/footer-banner-1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__img-decoration-down {
+    width: 150px;
+    height: 200px;
+    background-image: url("../assets/footer-banner-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 0px;
+    left: 90px;
+
+    @include media(300px) {
+      display: none;
+    }
+  }
+  &__img-decoration-over {
+    width: 150px;
+    height: 150px;
+    background-image: url("../assets/footer-banner-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    bottom: 40px;
+    @include media(300px) {
+      display: none;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 300px;
+    background-color: red;
+  }
+
+  &__contact {
+    color: $blue-dark;
+  }
+
+  &__title-contact {
+    @include title;
+  }
+
+  &__label-contact {
+    padding: 20px 0 10px 0;
+    font-size: 1.2rem;
+  }
+
+  &__input-contact {
+    background-color: $blue-primary;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    color: $white;
+  }
+
+  &__input-contact--textarea {
+    height: 100px;
+    padding: 10px 0 10px 10px;
+  }
+
+  &__btn-contact {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: $blue-dark;
+    color: $white;
+    margin: 40px auto;
   }
 }
 .footer {
-  background-color: gray;
+  @include flex($direction: column);
+  background-color: $blue-primary;
+
+  &__red-social {
+    @include flex($justify: space-around);
+    color: $white;
+    padding: 20px 0;
+    width: 100px;
+  }
+
+  &__a {
+    width: 50px;
+  }
+  &__p {
+    padding-bottom: 20px;
+    color: $white;
+  }
 }
