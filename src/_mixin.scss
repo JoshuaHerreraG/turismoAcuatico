@@ -22,8 +22,13 @@
   align-items: $align;
 }
 
-@mixin media($width: 700px) {
+@mixin mediaMax($width: 700px) {
   @media (max-width: $width) {
+    @content;
+  }
+}
+@mixin mediaMin($width: 700px) {
+  @media (min-width: $width) {
     @content;
   }
 }

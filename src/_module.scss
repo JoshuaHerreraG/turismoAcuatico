@@ -1,6 +1,31 @@
 .header {
-  background-color: gray;
+  background-color: $blue-primary;
   display: none;
+
+  &__container {
+    @include flex($justify: space-between);
+    color: $white;
+    height: 40px;
+  }
+
+  &__h1 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: $white;
+  }
+
+  &__nav {
+    @include flex($justify: space-around);
+    width: 300px;
+  }
+
+  &__menu {
+    font-size: 1em;
+  }
+
+  @include mediaMin(750px) {
+    display: block;
+  }
 }
 .header-movil {
   @include flex(space-between, center);
@@ -16,11 +41,27 @@
   svg {
     fill: $white;
   }
+
+  @include mediaMin(750px) {
+    display: none;
+  }
 }
 
 .main {
+  &__section-banner-movil {
+    @include mediaMin(750px) {
+      display: none;
+    }
+  }
+
+  &__section-banner {
+    display: none;
+    @include mediaMin(750px) {
+      @include flex($justify: space-between);
+    }
+  }
   &__banner {
-    @include media(300px) {
+    @include mediaMax(300px) {
       width: 100%;
       height: 300px;
       background-image: url(../assets/banner-1.jpg);
@@ -34,8 +75,12 @@
     width: 240px;
     height: 360px;
     margin: 30px auto 0 auto;
-    @include media(300px) {
+    @include mediaMax(300px) {
       display: none;
+    }
+
+    @include mediaMin(750px) {
+      // width: ;
     }
   }
 
@@ -63,6 +108,10 @@
   &__about {
     background-color: $blue-primary;
     color: $white;
+
+    @include mediaMin(750px) {
+      width: 50%;
+    }
   }
 
   &__title-about {
@@ -73,9 +122,26 @@
     @include text;
   }
 
+  &__section-testimonial-movil {
+    @include mediaMin(750px) {
+      display: none;
+    }
+  }
+
+  &__section-testimonial {
+    display: none;
+    @include mediaMin(750px) {
+      @include flex($justify: space-between);
+    }
+  }
+
   &__testimonials {
     background-color: $blue-secundary;
     color: $white;
+
+    @include mediaMin(750px) {
+      width: 40%;
+    }
   }
 
   &__title-testimonials {
@@ -88,6 +154,11 @@
 
   &__guias {
     padding: 70px 0;
+
+    @include mediaMin(750px) {
+      width: 40%;
+      margin: 0;
+    }
   }
 
   &__cards-guias {
@@ -139,8 +210,18 @@
     padding-bottom: 50px;
   }
 
+  &__cards-experience--container {
+    @include mediaMin(750px) {
+      @include flex($justify: space-around);
+      height: 500px;
+    }
+  }
+
   &__cards-experience {
     @include flex($justify: center, $direction: column, $gap: 20px);
+    @include mediaMin(750px) {
+      width: 270px;
+    }
   }
 
   &__cards-img-experience {
@@ -149,6 +230,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @include mediaMin(750px) {
+      width: 100px;
+    }
   }
 
   &__cards-img-experience--first {
@@ -183,7 +268,7 @@
     margin: 0 auto;
     overflow: hidden;
 
-    @include media(300px) {
+    @include mediaMax(300px) {
       width: 100%;
       height: 300px;
       background-image: url("../assets/footer-banner-1.jpg");
@@ -204,7 +289,7 @@
     top: 0px;
     left: 90px;
 
-    @include media(300px) {
+    @include mediaMax(300px) {
       display: none;
     }
   }
@@ -217,7 +302,7 @@
     background-size: cover;
     position: relative;
     bottom: 40px;
-    @include media(300px) {
+    @include mediaMax(300px) {
       display: none;
     }
   }
@@ -226,10 +311,22 @@
     width: 100%;
     height: 300px;
     background-color: red;
+    @include mediaMin(750px){
+      width: 50%;
+    }
   }
 
-  &__contact {
+  &__contact{
+    @include mediaMin(750px){
+      @include flex($direction: row-reverse, $justify: space-between, $gap: 90px);
+    }
+  }
+
+  &__contact-form {
     color: $blue-dark;
+    @include mediaMin(750px){
+      width: 50%;
+    }
   }
 
   &__title-contact {
