@@ -57,7 +57,8 @@
   &__section-banner {
     display: none;
     @include mediaMin(750px) {
-      @include flex($justify: space-between);
+      @include flex($justify: center, $align: flex-start);
+      padding-top: 50px;
     }
   }
   &__banner {
@@ -80,7 +81,10 @@
     }
 
     @include mediaMin(750px) {
-      // width: ;
+      // background-color: red;
+      width: 400px;
+      height: 560px;
+      margin: 30px auto 0 auto;
     }
   }
 
@@ -91,6 +95,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @include mediaMin(750px) {
+      width: 250px;
+      height: 300px;
+    }
   }
 
   &__img-banner-over {
@@ -103,6 +112,11 @@
     position: relative;
     top: -70px;
     left: 90px;
+
+    @include mediaMin(750px) {
+      width: 250px;
+      height: 300px;
+    }
   }
 
   &__about {
@@ -111,6 +125,8 @@
 
     @include mediaMin(750px) {
       width: 50%;
+      max-width: 500px;
+      height: 800px;
     }
   }
 
@@ -131,7 +147,8 @@
   &__section-testimonial {
     display: none;
     @include mediaMin(750px) {
-      @include flex($justify: space-between);
+      @include flex($justify: center, $align: flex-start);
+      margin-top: 30px;
     }
   }
 
@@ -140,7 +157,12 @@
     color: $white;
 
     @include mediaMin(750px) {
-      width: 40%;
+      max-width: 500px;
+      width: 60%;
+      height: 650px;
+      position: relative;
+      top: -250px;
+      z-index: 2;
     }
   }
 
@@ -156,13 +178,18 @@
     padding: 70px 0;
 
     @include mediaMin(750px) {
-      width: 40%;
+      width: 30%;
       margin: 0;
+      padding: 0;
     }
   }
 
   &__cards-guias {
     @include flex($gap: 20px, $align: flex-start);
+
+    @include mediaMin(750px) {
+      margin-left: 20px;
+    }
   }
 
   &__cards-img-guia {
@@ -200,13 +227,26 @@
     padding-bottom: 50px;
   }
 
+  &__title-experience-father {
+    @include flex($justify: center, $gap: 50px);
+  }
+
   &__experience {
     color: $blue-dark;
   }
 
+  &__line-decoration {
+    @include mediaMin(750px) {
+      width: 150px;
+      height: 5px;
+      background-color: $orange;
+      margin-bottom: 17px;
+    }
+  }
+
   &__title-experience {
     @include title;
-    font-size: 1.9em;
+    font-size: 2em;
     padding-bottom: 50px;
   }
 
@@ -266,7 +306,6 @@
     width: 240px;
     height: 360px;
     margin: 0 auto;
-    overflow: hidden;
 
     @include mediaMax(300px) {
       width: 100%;
@@ -275,6 +314,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+
+    @include mediaMin(750px) {
+      height: 660px;
+      margin: 0 auto;
     }
   }
 
@@ -292,6 +336,11 @@
     @include mediaMax(300px) {
       display: none;
     }
+
+    @include mediaMin(750px) {
+      width: 250px;
+      height: 300px;
+    }
   }
   &__img-decoration-over {
     width: 150px;
@@ -305,26 +354,35 @@
     @include mediaMax(300px) {
       display: none;
     }
+
+    @include mediaMin(750px) {
+      width: 250px;
+      height: 300px;
+    }
   }
 
   &__map {
     width: 100%;
     height: 300px;
     background-color: red;
-    @include mediaMin(750px){
+    @include mediaMin(750px) {
       width: 50%;
     }
   }
 
-  &__contact{
-    @include mediaMin(750px){
-      @include flex($direction: row-reverse, $justify: space-between, $gap: 90px);
+  &__contact {
+    @include mediaMin(750px) {
+      @include flex(
+        $direction: row-reverse,
+        $justify: space-between,
+        $gap: 90px
+      );
     }
   }
 
   &__contact-form {
     color: $blue-dark;
-    @include mediaMin(750px){
+    @include mediaMin(750px) {
       width: 50%;
     }
   }
